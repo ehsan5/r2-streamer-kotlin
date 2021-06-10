@@ -45,6 +45,7 @@ class EpubParser : PublicationParser {
     private val encp = EncryptionParser()
 
     private fun generateContainerFrom(path: String): EpubContainer {
+        Log.e("ehsan","salam2");
         val isDirectory = File(path).isDirectory
         val container: EpubContainer?
 
