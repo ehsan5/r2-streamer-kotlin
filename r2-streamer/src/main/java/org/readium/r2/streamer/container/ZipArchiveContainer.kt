@@ -9,6 +9,7 @@
 
 package org.readium.r2.streamer.container
 
+import android.util.Log
 import java.io.ByteArrayOutputStream
 import java.io.InputStream
 import java.net.URI
@@ -28,6 +29,7 @@ interface ZipArchiveContainer : Container {
 
     override fun data(relativePath: String): ByteArray {
 
+        Log.e("ehsan","salam");
         val zipEntry = getEntry(relativePath)// ?: return ByteArray(0)
         val inputStream = zipFile.getInputStream(zipEntry)
         val outputStream = ByteArrayOutputStream()
