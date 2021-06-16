@@ -19,7 +19,7 @@ import org.zeroturnaround.zip.ZipUtil
 import java.io.File
 import java.util.zip.ZipFile
 
-class ContainerEpub : EpubContainer, ZipArchiveContainer {
+open class ContainerEpub : EpubContainer, ZipArchiveContainer {
 
     override fun xmlDocumentForFile(relativePath: String): XmlParser {
         val containerData = data(relativePath)
